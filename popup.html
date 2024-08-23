@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Custom Pomodoro Timer</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #ffd700;
+    }
+    .timer {
+      font-size: 48px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    button {
+      background-color: #ffd700;
+      color: #1e1e1e;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #ffed9e;
+    }
+    input {
+      background-color: #333;
+      color: #ffd700;
+      border: 1px solid #ffd700;
+      padding: 5px;
+      margin: 5px 0;
+      width: 50px;
+    }
+    label {
+      display: inline-block;
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Custom Pomodoro Timer</h2>
+  <div class="timer" id="timer">25:00</div>
+  <div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+  </div>
+  <div>
+    <label for="workTime">Work Time (min):</label>
+    <input type="number" id="workTime" value="25" min="1" max="120">
+  </div>
+  <div>
+    <label for="breakTime">Break Time (min):</label>
+    <input type="number" id="breakTime" value="5" min="1" max="30">
+  </div>
+  <div>
+    <label for="longBreakTime">Long Break (min):</label>
+    <input type="number" id="longBreakTime" value="15" min="1" max="60">
+  </div>
+  <div>
+    <label for="sessionsBeforeLongBreak">Sessions before long break:</label>
+    <input type="number" id="sessionsBeforeLongBreak" value="4" min="1" max="10">
+  </div>
+  <div>
+    <label for="snoozeTime">Snooze Time (min):</label>
+    <input type="number" id="snoozeTime" value="5" min="1" max="30">
+  </div>
+  <button id="snooze">Snooze</button>
+  <script src="popup.js"></script>
+</body>
+</html>
